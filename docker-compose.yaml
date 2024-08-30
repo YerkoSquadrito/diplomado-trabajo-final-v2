@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+    container_name: backend
+    ports:
+      - "8001:8001"
+    networks:
+      - app-network
+
+  frontend:
+    build: 
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "8502:8502"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge

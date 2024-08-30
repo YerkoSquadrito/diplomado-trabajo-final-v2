@@ -1,2 +1,2 @@
-# diplomado-trabajo-final-v2
-Versión 2
+# diplomado-trabajo-final
+Trabajo final
