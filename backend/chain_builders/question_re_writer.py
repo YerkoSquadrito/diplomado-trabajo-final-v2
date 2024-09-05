@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import Runnable
 from langchain_core.language_models import BaseChatModel
@@ -16,11 +16,7 @@ re_write_prompt = ChatPromptTemplate.from_messages(
 )
 
 def build_question_re_writer_chain(
-        llm = AzureChatOpenAI(
-            deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         prompt: ChatPromptTemplate = re_write_prompt
 ) -> Runnable:
     """

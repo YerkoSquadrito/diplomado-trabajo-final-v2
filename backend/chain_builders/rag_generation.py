@@ -1,15 +1,11 @@
 from langchain import hub
 from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 from langchain_core.runnables import Runnable
 import os
 
 def build_rag_chain(
-        llm = AzureChatOpenAI(
-            deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         prompt = hub.pull("rlm/rag-prompt")
     ) -> Runnable:
     """

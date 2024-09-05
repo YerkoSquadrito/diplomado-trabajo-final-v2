@@ -73,7 +73,8 @@ custom_styles = {
 }
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-default_message = "¡Hola! Soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. Mis capacidades son..."
+default_message = """¡Hola! Soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. 
+Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile."""
 
 app.layout = dbc.Container([
     dcc.Store(id='chat-history', data=[('ai', default_message)]),
@@ -198,9 +199,9 @@ def send_message(n_clicks, n_submit, user_input, chat_history_display, chat_hist
 def update_bot_response(chat_history):
     if chat_history and chat_history[-1][0] == 'human':
         # Send request to FastAPI backend
-        request_message = {"text": chat_history}
-        response = requests.post("http://backend:8001/chat", json=request_message).json()['response']
-        logging.error(response)
+        input = {"chat_history": chat_history}
+        ai_response = requests.post("http://backend:8001/chat", json=input).json()['response']
+        logging.error(ai_response)
         
         # Reconstruct chat display from chat history
         chat_history_display = []
@@ -211,10 +212,10 @@ def update_bot_response(chat_history):
                 chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(message)))
         
         # Add new bot response
-        chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(response)))
+        chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(ai_response)))
         
         # Update chat history
-        chat_history = chat_history + [('ai', response)]
+        chat_history = chat_history + [('ai', ai_response)]
         
         return chat_history_display, chat_history
     return dash.no_update
