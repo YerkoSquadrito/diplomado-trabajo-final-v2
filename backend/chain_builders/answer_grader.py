@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 from langchain_core.runnables import Runnable
 import os
 
@@ -16,11 +16,7 @@ system_prompt = """You are a grader assessing whether an answer addresses / reso
 Give a binary score 'yes' or 'no'. Yes' means that the answer resolves the question."""
 
 def build_answer_grader_chain(
-        llm = AzureChatOpenAI(
-            azure_deployment=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         system_prompt = system_prompt,
         output_schema = GradeAnswer
 ) -> Runnable:
