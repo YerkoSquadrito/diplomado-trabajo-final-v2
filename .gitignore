@@ -6,3 +6,9 @@ __pycache__/
 # Virtual environments
 venv/
 env/
+
+
+
+# GC
+.venv/
+.env
