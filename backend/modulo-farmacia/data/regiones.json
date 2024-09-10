@@ -1,0 +1,1954 @@
+[
+    {
+      "identifier": "XI",
+      "name": "Aisén del Gral. Carlos Ibáñez del Campo",
+      "romanNumber": "XI",
+      "number": 11,
+      "abbreviation": "AI",
+      "capital": "Coyhaique",
+      "ISO3166_2": "CL-AI",
+      "provinces": [
+        {
+          "identifier": "XI-01",
+          "name": "Coyhaique",
+          "capital": "Coyhaique",
+          "communes": [
+            {
+              "identifier": "XI-01-001",
+              "name": "Coyhaique"
+            },
+            {
+              "identifier": "XI-01-002",
+              "name": "Lago Verde"
+            }
+          ]
+        },
+        {
+          "identifier": "XI-02",
+          "name": "Aysén",
+          "capital": "Puerto Aysén",
+          "communes": [
+            {
+              "identifier": "XI-02-001",
+              "name": "Aisén"
+            },
+            {
+              "identifier": "XI-02-002",
+              "name": "Cisnes"
+            },
+            {
+              "identifier": "XI-02-003",
+              "name": "Guaitecas"
+            }
+          ]
+        },
+        {
+          "identifier": "XI-03",
+          "name": "Capitán Pratt",
+          "capital": "Cochrane",
+          "communes": [
+            {
+              "identifier": "XI-03-001",
+              "name": "Cochrane"
+            },
+            {
+              "identifier": "XI-03-002",
+              "name": "O’Higgins"
+            },
+            {
+              "identifier": "XI-03-003",
+              "name": "Tortel"
+            }
+          ]
+        },
+        {
+          "identifier": "XI-04",
+          "name": "General Carrera",
+          "capital": "Chile Chico",
+          "communes": [
+            {
+              "identifier": "XI-04-001",
+              "name": "Chile Chico"
+            },
+            {
+              "identifier": "XI-04-002",
+              "name": "Río Ibáñez"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "II",
+      "name": "Antofagasta",
+      "romanNumber": "II",
+      "number": 2,
+      "abbreviation": "AN",
+      "capital": "Antofagasta",
+      "ISO3166_2": "CL-AN",
+      "provinces": [
+        {
+          "identifier": "II-01",
+          "name": "Antofagasta",
+          "capital": "Antofagasta",
+          "communes": [
+            {
+              "identifier": "II-01-001",
+              "name": "Antofagasta"
+            },
+            {
+              "identifier": "II-01-002",
+              "name": "Mejillones"
+            },
+            {
+              "identifier": "II-01-003",
+              "name": "Sierra Gorda"
+            },
+            {
+              "identifier": "II-01-004",
+              "name": "Taltal"
+            }
+          ]
+        },
+        {
+          "identifier": "II-02",
+          "name": "El Loa",
+          "capital": "Calama",
+          "communes": [
+            {
+              "identifier": "II-02-001",
+              "name": "Calama"
+            },
+            {
+              "identifier": "II-02-002",
+              "name": "Ollagüe"
+            },
+            {
+              "identifier": "II-02-003",
+              "name": "Atacama"
+            }
+          ]
+        },
+        {
+          "identifier": "II-03",
+          "name": "Tocopilla",
+          "capital": "Tocopilla",
+          "communes": [
+            {
+              "identifier": "II-03-001",
+              "name": "Tocopilla"
+            },
+            {
+              "identifier": "II-03-002",
+              "name": "María Elena"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "IX",
+      "name": "Araucanía",
+      "romanNumber": "IX",
+      "number": 9,
+      "abbreviation": "AR",
+      "capital": "Temuco",
+      "ISO3166_2": "CL-AR",
+      "provinces": [
+        {
+          "identifier": "IX-01",
+          "name": "Cautín",
+          "capital": "Temuco",
+          "communes": [
+            {
+              "identifier": "IX-01-001",
+              "name": "Temuco"
+            },
+            {
+              "identifier": "IX-01-002",
+              "name": "Carahu"
+            },
+            {
+              "identifier": "IX-01-003",
+              "name": "Cunco"
+            },
+            {
+              "identifier": "IX-01-004",
+              "name": "Curarrehue"
+            },
+            {
+              "identifier": "IX-01-005",
+              "name": "Freire"
+            },
+            {
+              "identifier": "IX-01-006",
+              "name": "Galvarin"
+            },
+            {
+              "identifier": "IX-01-007",
+              "name": "Gorbea"
+            },
+            {
+              "identifier": "IX-01-008",
+              "name": "Lautaro"
+            },
+            {
+              "identifier": "IX-01-009",
+              "name": "Loncoche"
+            },
+            {
+              "identifier": "IX-01-010",
+              "name": "Melipeuco"
+            },
+            {
+              "identifier": "IX-01-011",
+              "name": "Nueva Imperial"
+            },
+            {
+              "identifier": "IX-01-012",
+              "name": "Padre las Casa"
+            },
+            {
+              "identifier": "IX-01-013",
+              "name": "Perquenco"
+            },
+            {
+              "identifier": "IX-01-014",
+              "name": "Pitrufquén"
+            },
+            {
+              "identifier": "IX-01-015",
+              "name": "Pucó"
+            },
+            {
+              "identifier": "IX-01-016",
+              "name": "Saavedra"
+            },
+            {
+              "identifier": "IX-01-017",
+              "name": "Teodoro Schmid"
+            },
+            {
+              "identifier": "IX-01-018",
+              "name": "Toltén"
+            },
+            {
+              "identifier": "IX-01-019",
+              "name": "Vilcún"
+            },
+            {
+              "identifier": "IX-01-020",
+              "name": "Villarrica"
+            },
+            {
+              "identifier": "IX-01-021",
+              "name": "Cholchol"
+            }
+          ]
+        },
+        {
+          "identifier": "IX-02",
+          "name": "Malleco",
+          "capital": "Angol",
+          "communes": [
+            {
+              "identifier": "IX-02-001",
+              "name": "Angol"
+            },
+            {
+              "identifier": "IX-02-002",
+              "name": "Collipulli"
+            },
+            {
+              "identifier": "IX-02-003",
+              "name": "Curacautín"
+            },
+            {
+              "identifier": "IX-02-004",
+              "name": "Ercilla"
+            },
+            {
+              "identifier": "IX-02-005",
+              "name": "Lonquimay"
+            },
+            {
+              "identifier": "IX-02-006",
+              "name": "Los Sauces"
+            },
+            {
+              "identifier": "IX-02-007",
+              "name": "Lumaco"
+            },
+            {
+              "identifier": "IX-02-008",
+              "name": "Purén"
+            },
+            {
+              "identifier": "IX-02-009",
+              "name": "Renaico"
+            },
+            {
+              "identifier": "IX-02-010",
+              "name": "Traiguén"
+            },
+            {
+              "identifier": "IX-02-011",
+              "name": "Victoria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "XV",
+      "name": "Arica y Parinacota",
+      "romanNumber": "XV",
+      "number": 15,
+      "abbreviation": "AP",
+      "capital": "Arica",
+      "ISO3166_2": "CL-AP",
+      "provinces": [
+        {
+          "identifier": "XV-01",
+          "name": "Arica",
+          "capital": "Arica",
+          "communes": [
+            {
+              "identifier": "XV-01-001",
+              "name": "Arica"
+            },
+            {
+              "identifier": "XV-01-002",
+              "name": "Camarones"
+            }
+          ]
+        },
+        {
+          "identifier": "XV-02",
+          "name": "Parinacota",
+          "capital": "Putre",
+          "communes": [
+            {
+              "identifier": "XV-02-001",
+              "name": "Putre"
+            },
+            {
+              "identifier": "XV-02-002",
+              "name": "General Lagos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "III",
+      "name": "Atacama",
+      "romanNumber": "III",
+      "number": 3,
+      "abbreviation": "AT",
+      "capital": "Copiapo",
+      "ISO3166_2": "CL-AT",
+      "provinces": [
+        {
+          "identifier": "III-01",
+          "name": "Copiapó",
+          "capital": "Copiapo",
+          "communes": [
+            {
+              "identifier": "III-01-001",
+              "name": "Copiapó"
+            },
+            {
+              "identifier": "III-01-002",
+              "name": "Caldera"
+            },
+            {
+              "identifier": "III-01-003",
+              "name": "Tierra Amarilla"
+            }
+          ]
+        },
+        {
+          "identifier": "III-02",
+          "name": "Chañaral",
+          "capital": "Chañaral",
+          "communes": [
+            {
+              "identifier": "III-02-001",
+              "name": "Chañaral"
+            },
+            {
+              "identifier": "III-02-002",
+              "name": "Diego de Almagro"
+            }
+          ]
+        },
+        {
+          "identifier": "III-03",
+          "name": "Huasco",
+          "capital": "Vallenar",
+          "communes": [
+            {
+              "identifier": "III-03-001",
+              "name": "Vallenar"
+            },
+            {
+              "identifier": "III-03-002",
+              "name": "Alto del Carmen"
+            },
+            {
+              "identifier": "III-03-003",
+              "name": "Freirina"
+            },
+            {
+              "identifier": "III-03-004",
+              "name": "Huasco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "VIII",
+      "name": "Biobío",
+      "romanNumber": "VIII",
+      "number": 8,
+      "abbreviation": "BI",
+      "capital": "Concepción",
+      "ISO3166_2": "CL-BI",
+      "provinces": [
+        {
+          "identifier": "VIII-01",
+          "name": "Concepción",
+          "capital": "Concepción",
+          "communes": [
+            {
+              "identifier": "VIII-01-001",
+              "name": "Concepción"
+            },
+            {
+              "identifier": "VIII-01-002",
+              "name": "Coronel"
+            },
+            {
+              "identifier": "VIII-01-003",
+              "name": "Chiguayante"
+            },
+            {
+              "identifier": "VIII-01-004",
+              "name": "Florida"
+            },
+            {
+              "identifier": "VIII-01-005",
+              "name": "Hualqui"
+            },
+            {
+              "identifier": "VIII-01-006",
+              "name": "Lota"
+            },
+            {
+              "identifier": "VIII-01-007",
+              "name": "Penco"
+            },
+            {
+              "identifier": "VIII-01-008",
+              "name": "San Pedro de la Paz"
+            },
+            {
+              "identifier": "VIII-01-009",
+              "name": "Santa Juana"
+            },
+            {
+              "identifier": "VIII-01-010",
+              "name": "Talcahuano"
+            },
+            {
+              "identifier": "VIII-01-011",
+              "name": "Tomé"
+            },
+            {
+              "identifier": "VIII-01-012",
+              "name": "Hualpén"
+            }
+          ]
+        },
+        {
+          "identifier": "VIII-02",
+          "name": "Arauco",
+          "capital": "Lebu",
+          "communes": [
+            {
+              "identifier": "VIII-02-001",
+              "name": "Lebu"
+            },
+            {
+              "identifier": "VIII-02-002",
+              "name": "Arauco"
+            },
+            {
+              "identifier": "VIII-02-003",
+              "name": "Cañete"
+            },
+            {
+              "identifier": "VIII-02-004",
+              "name": "Contulmo"
+            },
+            {
+              "identifier": "VIII-02-005",
+              "name": "Curanilahue"
+            },
+            {
+              "identifier": "VIII-02-006",
+              "name": "Los Álamos"
+            },
+            {
+              "identifier": "VIII-02-007",
+              "name": "Tirúa"
+            }
+          ]
+        },
+        {
+          "identifier": "VIII-03",
+          "name": "Biobío",
+          "capital": "Los Ángeles",
+          "communes": [
+            {
+              "identifier": "VIII-03-001",
+              "name": "Los Ángeles"
+            },
+            {
+              "identifier": "VIII-03-002",
+              "name": "Antuco"
+            },
+            {
+              "identifier": "VIII-03-003",
+              "name": "Cabrero"
+            },
+            {
+              "identifier": "VIII-03-004",
+              "name": "Laja"
+            },
+            {
+              "identifier": "VIII-03-005",
+              "name": "Mulchén"
+            },
+            {
+              "identifier": "VIII-03-006",
+              "name": "Nacimiento"
+            },
+            {
+              "identifier": "VIII-03-007",
+              "name": "Negrete"
+            },
+            {
+              "identifier": "VIII-03-008",
+              "name": "Quilaco"
+            },
+            {
+              "identifier": "VIII-03-009",
+              "name": "Quilleco"
+            },
+            {
+              "identifier": "VIII-03-010",
+              "name": "San Rosendo"
+            },
+            {
+              "identifier": "VIII-03-011",
+              "name": "Santa Bárbara"
+            },
+            {
+              "identifier": "VIII-03-012",
+              "name": "Tucapel"
+            },
+            {
+              "identifier": "VIII-03-013",
+              "name": "Yumbel"
+            },
+            {
+              "identifier": "VIII-03-014",
+              "name": "Alto Biobío"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "IV",
+      "name": "Coquimbo",
+      "romanNumber": "IV",
+      "number": 4,
+      "abbreviation": "CO",
+      "capital": "La Serena",
+      "ISO3166_2": "CL-CO",
+      "provinces": [
+        {
+          "identifier": "IV-01",
+          "name": "Elqui",
+          "capital": "Coquimbo",
+          "communes": [
+            {
+              "identifier": "IV-01-001",
+              "name": "La Serena"
+            },
+            {
+              "identifier": "IV-01-002",
+              "name": "Coquimbo"
+            },
+            {
+              "identifier": "IV-01-003",
+              "name": "Andacollo"
+            },
+            {
+              "identifier": "IV-01-004",
+              "name": "La Higuera"
+            },
+            {
+              "identifier": "IV-01-005",
+              "name": "Paiguano"
+            },
+            {
+              "identifier": "IV-01-006",
+              "name": "Vicuña"
+            }
+          ]
+        },
+        {
+          "identifier": "IV-02",
+          "name": "Choapa",
+          "capital": "Illapel",
+          "communes": [
+            {
+              "identifier": "IV-02-001",
+              "name": "Illapel"
+            },
+            {
+              "identifier": "IV-02-002",
+              "name": "Canela"
+            },
+            {
+              "identifier": "IV-02-003",
+              "name": "Los Vilos"
+            },
+            {
+              "identifier": "IV-02-004",
+              "name": "Salamanca"
+            }
+          ]
+        },
+        {
+          "identifier": "IV-03",
+          "name": "Limarí",
+          "capital": "Ovalle",
+          "communes": [
+            {
+              "identifier": "IV-03-001",
+              "name": "Ovalle"
+            },
+            {
+              "identifier": "IV-03-002",
+              "name": "Combarbalá"
+            },
+            {
+              "identifier": "IV-03-003",
+              "name": "Monte Patria"
+            },
+            {
+              "identifier": "IV-03-004",
+              "name": "Punitaqui"
+            },
+            {
+              "identifier": "IV-03-005",
+              "name": "Río Hurtado"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "VI",
+      "name": "Libertador Gral. Bernardo O'Higgins",
+      "romanNumber": "VI",
+      "number": 6,
+      "abbreviation": "LI",
+      "capital": "Rancagua",
+      "ISO3166_2": "CL-LI",
+      "provinces": [
+        {
+          "identifier": "VI-01",
+          "name": "Cachapoal",
+          "capital": "Rancagua",
+          "communes": [
+            {
+              "identifier": "VI-01-001",
+              "name": "Rancagua"
+            },
+            {
+              "identifier": "VI-01-002",
+              "name": "Codegua"
+            },
+            {
+              "identifier": "VI-01-003",
+              "name": "Coinco"
+            },
+            {
+              "identifier": "VI-01-004",
+              "name": "Coltauco"
+            },
+            {
+              "identifier": "VI-01-005",
+              "name": "Doñihue"
+            },
+            {
+              "identifier": "VI-01-006",
+              "name": "Graneros"
+            },
+            {
+              "identifier": "VI-01-007",
+              "name": "Las Cabras"
+            },
+            {
+              "identifier": "VI-01-008",
+              "name": "Machalí"
+            },
+            {
+              "identifier": "VI-01-009",
+              "name": "Malloa"
+            },
+            {
+              "identifier": "VI-01-010",
+              "name": "Mostazal"
+            },
+            {
+              "identifier": "VI-01-011",
+              "name": "Olivar"
+            },
+            {
+              "identifier": "VI-01-012",
+              "name": "Peumo"
+            },
+            {
+              "identifier": "VI-01-013",
+              "name": "Pichidegua"
+            },
+            {
+              "identifier": "VI-01-014",
+              "name": "Quinta de Tilcoco"
+            },
+            {
+              "identifier": "VI-01-015",
+              "name": "Rengo"
+            },
+            {
+              "identifier": "VI-01-016",
+              "name": "Requínoa"
+            },
+            {
+              "identifier": "VI-01-017",
+              "name": "San Vicente"
+            }
+          ]
+        },
+        {
+          "identifier": "VI-02",
+          "name": "Cardenal Caro",
+          "capital": "Pichilemu",
+          "communes": [
+            {
+              "identifier": "VI-02-001",
+              "name": "Pichilemu"
+            },
+            {
+              "identifier": "VI-02-002",
+              "name": "La Estrella"
+            },
+            {
+              "identifier": "VI-02-003",
+              "name": "Litueche"
+            },
+            {
+              "identifier": "VI-02-004",
+              "name": "Marichihue"
+            },
+            {
+              "identifier": "VI-02-005",
+              "name": "Navidad"
+            },
+            {
+              "identifier": "VI-02-006",
+              "name": "Paredones"
+            }
+          ]
+        },
+        {
+          "identifier": "VI-03",
+          "name": "Colchagua",
+          "capital": "San Fernando",
+          "communes": [
+            {
+              "identifier": "VI-03-001",
+              "name": "San Fernando"
+            },
+            {
+              "identifier": "VI-03-002",
+              "name": "Chépica"
+            },
+            {
+              "identifier": "VI-03-003",
+              "name": "Chimbarongo"
+            },
+            {
+              "identifier": "VI-03-004",
+              "name": "Lolol"
+            },
+            {
+              "identifier": "VI-03-005",
+              "name": "Nancagua"
+            },
+            {
+              "identifier": "VI-03-006",
+              "name": "Palmilla"
+            },
+            {
+              "identifier": "VI-03-007",
+              "name": "Peralillo"
+            },
+            {
+              "identifier": "VI-03-008",
+              "name": "Placilla"
+            },
+            {
+              "identifier": "VI-03-009",
+              "name": "Pumanque"
+            },
+            {
+              "identifier": "VI-03-010",
+              "name": "Santa Cruz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "X",
+      "name": "Los Lagos",
+      "romanNumber": "X",
+      "number": 10,
+      "abbreviation": "LL",
+      "capital": "Puerto Montt",
+      "ISO3166_2": "CL-LL",
+      "provinces": [
+        {
+          "identifier": "X-01",
+          "name": "Llanquihue",
+          "capital": "Puerto Montt",
+          "communes": [
+            {
+              "identifier": "X-01-001",
+              "name": "Puerto Montt"
+            },
+            {
+              "identifier": "X-01-002",
+              "name": "Calbuco"
+            },
+            {
+              "identifier": "X-01-003",
+              "name": "Cochamó"
+            },
+            {
+              "identifier": "X-01-004",
+              "name": "Fresia"
+            },
+            {
+              "identifier": "X-01-005",
+              "name": "Frutillar"
+            },
+            {
+              "identifier": "X-01-006",
+              "name": "Los Muermos"
+            },
+            {
+              "identifier": "X-01-007",
+              "name": "Llanquihue"
+            },
+            {
+              "identifier": "X-01-008",
+              "name": "Maullín"
+            },
+            {
+              "identifier": "X-01-009",
+              "name": "Puerto Varas"
+            }
+          ]
+        },
+        {
+          "identifier": "X-02",
+          "name": "Chiloé",
+          "capital": "Castro",
+          "communes": [
+            {
+              "identifier": "X-02-001",
+              "name": "Castro"
+            },
+            {
+              "identifier": "X-02-002",
+              "name": "Ancud"
+            },
+            {
+              "identifier": "X-02-003",
+              "name": "Chonchi"
+            },
+            {
+              "identifier": "X-02-004",
+              "name": "Curaco de Vélez"
+            },
+            {
+              "identifier": "X-02-005",
+              "name": "Dalcahue"
+            },
+            {
+              "identifier": "X-02-006",
+              "name": "Puqueldón"
+            },
+            {
+              "identifier": "X-02-007",
+              "name": "Queilén"
+            },
+            {
+              "identifier": "X-02-008",
+              "name": "Quellón"
+            },
+            {
+              "identifier": "X-02-009",
+              "name": "Quemchi"
+            },
+            {
+              "identifier": "X-02-010",
+              "name": "Quinchao"
+            }
+          ]
+        },
+        {
+          "identifier": "X-03",
+          "name": "Osorno",
+          "capital": "Osorno",
+          "communes": [
+            {
+              "identifier": "X-03-001",
+              "name": "Osorno"
+            },
+            {
+              "identifier": "X-03-002",
+              "name": "Puerto Octay"
+            },
+            {
+              "identifier": "X-03-003",
+              "name": "Purranque"
+            },
+            {
+              "identifier": "X-03-004",
+              "name": "Puyehue"
+            },
+            {
+              "identifier": "X-03-005",
+              "name": "Río Negro"
+            },
+            {
+              "identifier": "X-03-006",
+              "name": "San Juan de la Costa"
+            },
+            {
+              "identifier": "X-03-007",
+              "name": "San Pablo"
+            }
+          ]
+        },
+        {
+          "identifier": "X-04",
+          "name": "Palena",
+          "capital": "Chaitén",
+          "communes": [
+            {
+              "identifier": "X-04-001",
+              "name": "Chaitén"
+            },
+            {
+              "identifier": "X-04-002",
+              "name": "Futaleufú"
+            },
+            {
+              "identifier": "X-04-003",
+              "name": "Hualaihué"
+            },
+            {
+              "identifier": "X-04-004",
+              "name": "Palena"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "XIV",
+      "name": "Los Ríos",
+      "romanNumber": "XIV",
+      "number": 14,
+      "abbreviation": "LR",
+      "capital": "Valdivia",
+      "ISO3166_2": "CL-LR",
+      "provinces": [
+        {
+          "identifier": "XIV-01",
+          "name": "Valdivia",
+          "capital": "Valdivia",
+          "communes": [
+            {
+              "identifier": "XIV-01-001",
+              "name": "Valdivia"
+            },
+            {
+              "identifier": "XIV-01-002",
+              "name": "Corral"
+            },
+            {
+              "identifier": "XIV-01-003",
+              "name": "Lanco"
+            },
+            {
+              "identifier": "XIV-01-004",
+              "name": "Los Lagos"
+            },
+            {
+              "identifier": "XIV-01-005",
+              "name": "Máfil"
+            },
+            {
+              "identifier": "XIV-01-006",
+              "name": "Mariquina"
+            },
+            {
+              "identifier": "XIV-01-007",
+              "name": "Paillaco"
+            },
+            {
+              "identifier": "XIV-01-008",
+              "name": "Panguipulli"
+            }
+          ]
+        },
+        {
+          "identifier": "XIV-02",
+          "name": "Ranco",
+          "capital": "La Unión",
+          "communes": [
+            {
+              "identifier": "XIV-02-001",
+              "name": "La Unión"
+            },
+            {
+              "identifier": "XIV-02-002",
+              "name": "Futrono"
+            },
+            {
+              "identifier": "XIV-02-003",
+              "name": "Lago Ranco"
+            },
+            {
+              "identifier": "XIV-02-004",
+              "name": "Río Bueno"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "XII",
+      "name": "Magallanes y de la Antártica Chilena",
+      "romanNumber": "XII",
+      "number": 12,
+      "abbreviation": "MA",
+      "capital": "Punta Arenas",
+      "ISO3166_2": "CL-MA",
+      "provinces": [
+        {
+          "identifier": "XII-01",
+          "name": "Magallanes",
+          "capital": "Punta Arenas",
+          "communes": [
+            {
+              "identifier": "XII-01-001",
+              "name": "Punta Arenas"
+            },
+            {
+              "identifier": "XII-01-002",
+              "name": "Laguna Blanca"
+            },
+            {
+              "identifier": "XII-01-003",
+              "name": "Río Verde"
+            },
+            {
+              "identifier": "XII-01-004",
+              "name": "San Gregorio"
+            }
+          ]
+        },
+        {
+          "identifier": "XII-02",
+          "name": "Antártica Chilena",
+          "capital": "Puerto Williams",
+          "communes": [
+            {
+              "identifier": "XII-02-001",
+              "name": "Cabo de Hornos (Ex. Navarino)"
+            },
+            {
+              "identifier": "XII-02-002",
+              "name": "Antártica"
+            }
+          ]
+        },
+        {
+          "identifier": "XII-03",
+          "name": "Tierra del Fuego",
+          "capital": "Porvenir",
+          "communes": [
+            {
+              "identifier": "XII-03-001",
+              "name": "Porvenir"
+            },
+            {
+              "identifier": "XII-03-002",
+              "name": "Primavera"
+            },
+            {
+              "identifier": "XII-03-003",
+              "name": "Timaukel"
+            }
+          ]
+        },
+        {
+          "identifier": "XII-04",
+          "name": "Última Esperanza",
+          "capital": "Puerto Natales",
+          "communes": [
+            {
+              "identifier": "XII-04-001",
+              "name": "Natales"
+            },
+            {
+              "identifier": "XII-04-002",
+              "name": "Torres del Paine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "VII",
+      "name": "Maule",
+      "romanNumber": "VII",
+      "number": 7,
+      "abbreviation": "ML",
+      "capital": "Talca",
+      "ISO3166_2": "CL-ML",
+      "provinces": [
+        {
+          "identifier": "VII-01",
+          "name": "Talca",
+          "capital": "Talca",
+          "communes": [
+            {
+              "identifier": "VII-01-001",
+              "name": "Talca"
+            },
+            {
+              "identifier": "VII-01-002",
+              "name": "Constitución"
+            },
+            {
+              "identifier": "VII-01-003",
+              "name": "Curepto"
+            },
+            {
+              "identifier": "VII-01-004",
+              "name": "Empedrado"
+            },
+            {
+              "identifier": "VII-01-005",
+              "name": "Maule"
+            },
+            {
+              "identifier": "VII-01-006",
+              "name": "Pelarco"
+            },
+            {
+              "identifier": "VII-01-007",
+              "name": "Pencahue"
+            },
+            {
+              "identifier": "VII-01-008",
+              "name": "Río Claro"
+            },
+            {
+              "identifier": "VII-01-009",
+              "name": "San Clemente"
+            },
+            {
+              "identifier": "VII-01-010",
+              "name": "San Rafael"
+            }
+          ]
+        },
+        {
+          "identifier": "VII-02",
+          "name": "Cauquenes",
+          "capital": "Cauquenes",
+          "communes": [
+            {
+              "identifier": "VII-02-001",
+              "name": "Cauquenes"
+            },
+            {
+              "identifier": "VII-02-002",
+              "name": "Chanco"
+            },
+            {
+              "identifier": "VII-02-003",
+              "name": "Pelluhue"
+            }
+          ]
+        },
+        {
+          "identifier": "VII-03",
+          "name": "Curicó",
+          "capital": "Curicó",
+          "communes": [
+            {
+              "identifier": "VII-03-001",
+              "name": "Curicó"
+            },
+            {
+              "identifier": "VII-03-002",
+              "name": "Hualañé"
+            },
+            {
+              "identifier": "VII-03-003",
+              "name": "Licantén"
+            },
+            {
+              "identifier": "VII-03-004",
+              "name": "Molina"
+            },
+            {
+              "identifier": "VII-03-005",
+              "name": "Rauco"
+            },
+            {
+              "identifier": "VII-03-006",
+              "name": "Romeral"
+            },
+            {
+              "identifier": "VII-03-007",
+              "name": "Sagrada Familia"
+            },
+            {
+              "identifier": "VII-03-008",
+              "name": "Teno"
+            },
+            {
+              "identifier": "VII-03-009",
+              "name": "Vichuquén"
+            }
+          ]
+        },
+        {
+          "identifier": "VII-04",
+          "name": "Linares",
+          "capital": "Linares",
+          "communes": [
+            {
+              "identifier": "VII-04-001",
+              "name": "Linares"
+            },
+            {
+              "identifier": "VII-04-002",
+              "name": "Colbún"
+            },
+            {
+              "identifier": "VII-04-003",
+              "name": "Longaví"
+            },
+            {
+              "identifier": "VII-04-004",
+              "name": "Parral"
+            },
+            {
+              "identifier": "VII-04-005",
+              "name": "Retiro"
+            },
+            {
+              "identifier": "VII-04-006",
+              "name": "San Javier"
+            },
+            {
+              "identifier": "VII-04-007",
+              "name": "Villa Alegre"
+            },
+            {
+              "identifier": "VII-04-008",
+              "name": "Yerbas Buenas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "XIII",
+      "name": "Metropolitana de Santiago",
+      "romanNumber": "XIII",
+      "number": 13,
+      "abbreviation": "RM",
+      "capital": "Santiago",
+      "ISO3166_2": "CL-RM",
+      "provinces": [
+        {
+          "identifier": "XIII-01",
+          "name": "Santiago",
+          "capital": "Santiago",
+          "communes": [
+            {
+              "identifier": "XIII-01-001",
+              "name": "Santiago"
+            },
+            {
+              "identifier": "XIII-01-002",
+              "name": "Cerrillos"
+            },
+            {
+              "identifier": "XIII-01-003",
+              "name": "Cerro Navia"
+            },
+            {
+              "identifier": "XIII-01-004",
+              "name": "Conchalí"
+            },
+            {
+              "identifier": "XIII-01-005",
+              "name": "El Bosque"
+            },
+            {
+              "identifier": "XIII-01-006",
+              "name": "Estación Central"
+            },
+            {
+              "identifier": "XIII-01-007",
+              "name": "Huechuraba"
+            },
+            {
+              "identifier": "XIII-01-008",
+              "name": "Independencia"
+            },
+            {
+              "identifier": "XIII-01-009",
+              "name": "La Cisterna"
+            },
+            {
+              "identifier": "XIII-01-010",
+              "name": "La Florida"
+            },
+            {
+              "identifier": "XIII-01-011",
+              "name": "La Granja"
+            },
+            {
+              "identifier": "XIII-01-012",
+              "name": "La Pintana"
+            },
+            {
+              "identifier": "XIII-01-013",
+              "name": "La Reina"
+            },
+            {
+              "identifier": "XIII-01-014",
+              "name": "Las Condes"
+            },
+            {
+              "identifier": "XIII-01-015",
+              "name": "Lo Barnechea"
+            },
+            {
+              "identifier": "XIII-01-016",
+              "name": "Lo Espejo"
+            },
+            {
+              "identifier": "XIII-01-017",
+              "name": "Lo Prado"
+            },
+            {
+              "identifier": "XIII-01-018",
+              "name": "Macul"
+            },
+            {
+              "identifier": "XIII-01-019",
+              "name": "Maipú"
+            },
+            {
+              "identifier": "XIII-01-020",
+              "name": "Ñuñoa"
+            },
+            {
+              "identifier": "XIII-01-021",
+              "name": "Pedro Aguirre Cerda"
+            },
+            {
+              "identifier": "XIII-01-022",
+              "name": "Peñalolén"
+            },
+            {
+              "identifier": "XIII-01-023",
+              "name": "Providencia"
+            },
+            {
+              "identifier": "XIII-01-024",
+              "name": "Pudahuel"
+            },
+            {
+              "identifier": "XIII-01-025",
+              "name": "Quilicura"
+            },
+            {
+              "identifier": "XIII-01-026",
+              "name": "Quinta Normal"
+            },
+            {
+              "identifier": "XIII-01-027",
+              "name": "Recoleta"
+            },
+            {
+              "identifier": "XIII-01-028",
+              "name": "Renca"
+            },
+            {
+              "identifier": "XIII-01-029",
+              "name": "San Joaquín"
+            },
+            {
+              "identifier": "XIII-01-030",
+              "name": "San Miguel"
+            },
+            {
+              "identifier": "XIII-01-031",
+              "name": "San Ramón"
+            },
+            {
+              "identifier": "XIII-01-032",
+              "name": "Vitacura"
+            }
+          ]
+        },
+        {
+          "identifier": "XIII-02",
+          "name": "Cordillera",
+          "capital": "Puente Alto",
+          "communes": [
+            {
+              "identifier": "XIII-02-001",
+              "name": "Puente Alto"
+            },
+            {
+              "identifier": "XIII-02-002",
+              "name": "Pirque"
+            },
+            {
+              "identifier": "XIII-02-003",
+              "name": "San José de Maipo"
+            }
+          ]
+        },
+        {
+          "identifier": "XIII-03",
+          "name": "Chacabuco",
+          "capital": "Colina",
+          "communes": [
+            {
+              "identifier": "XIII-03-001",
+              "name": "Colina"
+            },
+            {
+              "identifier": "XIII-03-002",
+              "name": "Lampa"
+            },
+            {
+              "identifier": "XIII-03-003",
+              "name": "Tiltil"
+            }
+          ]
+        },
+        {
+          "identifier": "XIII-04",
+          "name": "Maipo",
+          "capital": "San Bernardo",
+          "communes": [
+            {
+              "identifier": "XIII-04-001",
+              "name": "San Bernardo"
+            },
+            {
+              "identifier": "XIII-04-002",
+              "name": "Buin"
+            },
+            {
+              "identifier": "XIII-04-003",
+              "name": "Calera de Tango"
+            },
+            {
+              "identifier": "XIII-04-004",
+              "name": "Paine"
+            }
+          ]
+        },
+        {
+          "identifier": "XIII-05",
+          "name": "Mellipilla",
+          "capital": "Melipilla",
+          "communes": [
+            {
+              "identifier": "XIII-05-001",
+              "name": "Melipilla"
+            },
+            {
+              "identifier": "XIII-05-002",
+              "name": "Alhué"
+            },
+            {
+              "identifier": "XIII-05-003",
+              "name": "Curacaví"
+            },
+            {
+              "identifier": "XIII-05-004",
+              "name": "María Pinto"
+            },
+            {
+              "identifier": "XIII-05-005",
+              "name": "San Pedro"
+            }
+          ]
+        },
+        {
+          "identifier": "XIII-06",
+          "name": "Talagante",
+          "capital": "Talagante",
+          "communes": [
+            {
+              "identifier": "XIII-06-001",
+              "name": "Talagante"
+            },
+            {
+              "identifier": "XIII-06-002",
+              "name": "El Monte"
+            },
+            {
+              "identifier": "XIII-06-003",
+              "name": "Isla de Maipo"
+            },
+            {
+              "identifier": "XIII-06-004",
+              "name": "Padre Hurtado"
+            },
+            {
+              "identifier": "XIII-06-005",
+              "name": "Peñaflor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "I",
+      "name": "Tarapacá",
+      "romanNumber": "I",
+      "number": 1,
+      "abbreviation": "TA",
+      "capital": "Arica",
+      "ISO3166_2": "CL-TA",
+      "provinces": [
+        {
+          "identifier": "I-01",
+          "name": "Iquique",
+          "capital": "Iquique",
+          "communes": [
+            {
+              "identifier": "I-01-001",
+              "name": "Iquique"
+            },
+            {
+              "identifier": "I-01-002",
+              "name": "Alto Hospicio"
+            }
+          ]
+        },
+        {
+          "identifier": "I-02",
+          "name": "Tamarugal",
+          "capital": "Pozo Almonte",
+          "communes": [
+            {
+              "identifier": "I-02-001",
+              "name": "Pozo Almonte"
+            },
+            {
+              "identifier": "I-02-002",
+              "name": "Camiña"
+            },
+            {
+              "identifier": "I-02-003",
+              "name": "Colchane"
+            },
+            {
+              "identifier": "I-02-004",
+              "name": "Huara"
+            },
+            {
+              "identifier": "I-02-005",
+              "name": "Pica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "V",
+      "name": "Valparaíso",
+      "romanNumber": "V",
+      "number": 5,
+      "abbreviation": "VA",
+      "capital": "Valparaíso",
+      "ISO3166_2": "CL-VS",
+      "provinces": [
+        {
+          "identifier": "V-01",
+          "name": "Valparaíso",
+          "capital": "Valparaíso",
+          "communes": [
+            {
+              "identifier": "V-01-001",
+              "name": "Valparaíso"
+            },
+            {
+              "identifier": "V-01-002",
+              "name": "Casablanca"
+            },
+            {
+              "identifier": "V-01-003",
+              "name": "Concón"
+            },
+            {
+              "identifier": "V-01-004",
+              "name": "Juan Fernández"
+            },
+            {
+              "identifier": "V-01-005",
+              "name": "Puchuncaví"
+            },
+            {
+              "identifier": "V-01-006",
+              "name": "Quintero"
+            },
+            {
+              "identifier": "V-01-007",
+              "name": "Viña del Mar"
+            }
+          ]
+        },
+        {
+          "identifier": "V-02",
+          "name": "Isla de Pascua",
+          "capital": "Hanga Roa",
+          "communes": [
+            {
+              "identifier": "V-02-001",
+              "name": "Isla de Pascua"
+            }
+          ]
+        },
+        {
+          "identifier": "V-03",
+          "name": "Los Andes",
+          "capital": "Los Andes",
+          "communes": [
+            {
+              "identifier": "V-03-001",
+              "name": "Los Andes"
+            },
+            {
+              "identifier": "V-03-002",
+              "name": "Calle Larga"
+            },
+            {
+              "identifier": "V-03-003",
+              "name": "Riconada"
+            },
+            {
+              "identifier": "V-03-004",
+              "name": "San Esteban"
+            }
+          ]
+        },
+        {
+          "identifier": "V-04",
+          "name": "Petorca",
+          "capital": "La Ligua",
+          "communes": [
+            {
+              "identifier": "V-04-001",
+              "name": "La Ligua"
+            },
+            {
+              "identifier": "V-04-002",
+              "name": "Cabildo"
+            },
+            {
+              "identifier": "V-04-003",
+              "name": "Papudo"
+            },
+            {
+              "identifier": "V-04-004",
+              "name": "Petorca"
+            },
+            {
+              "identifier": "V-04-005",
+              "name": "Zapallar"
+            }
+          ]
+        },
+        {
+          "identifier": "V-05",
+          "name": "Quillota",
+          "capital": "Quillota",
+          "communes": [
+            {
+              "identifier": "V-05-001",
+              "name": "Quillota"
+            },
+            {
+              "identifier": "V-05-002",
+              "name": "Calera"
+            },
+            {
+              "identifier": "V-05-003",
+              "name": "Hijuelas"
+            },
+            {
+              "identifier": "V-05-004",
+              "name": "La Cruz"
+            },
+            {
+              "identifier": "V-05-005",
+              "name": "Nogales"
+            }
+          ]
+        },
+        {
+          "identifier": "V-06",
+          "name": "San Antonio",
+          "capital": "San Antonio",
+          "communes": [
+            {
+              "identifier": "V-06-001",
+              "name": "San Antonio"
+            },
+            {
+              "identifier": "V-06-002",
+              "name": "Algarrobo"
+            },
+            {
+              "identifier": "V-06-003",
+              "name": "Cartagena"
+            },
+            {
+              "identifier": "V-06-004",
+              "name": "El Quisco"
+            },
+            {
+              "identifier": "V-06-005",
+              "name": "El Tabo"
+            },
+            {
+              "identifier": "V-06-006",
+              "name": "Santo Domingo"
+            }
+          ]
+        },
+        {
+          "identifier": "V-07",
+          "name": "San Felipe de Aconcagua",
+          "capital": "San Felipe",
+          "communes": [
+            {
+              "identifier": "V-07-001",
+              "name": "San Felipe"
+            },
+            {
+              "identifier": "V-07-002",
+              "name": "Catemu"
+            },
+            {
+              "identifier": "V-07-003",
+              "name": "Llaillay"
+            },
+            {
+              "identifier": "V-07-004",
+              "name": "Panquehue"
+            },
+            {
+              "identifier": "V-07-005",
+              "name": "Putaendo"
+            },
+            {
+              "identifier": "V-07-006",
+              "name": "Santa María"
+            }
+          ]
+        },
+        {
+          "identifier": "V-08",
+          "name": "Marga Marga",
+          "capital": "Quilpué",
+          "communes": [
+            {
+              "identifier": "V-08-001",
+              "name": "Quilpué"
+            },
+            {
+              "identifier": "V-08-002",
+              "name": "Limache"
+            },
+            {
+              "identifier": "V-08-003",
+              "name": "Olmué"
+            },
+            {
+              "identifier": "V-08-004",
+              "name": "Villa Alemana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identifier": "XVI",
+      "name": "Ñuble",
+      "romanNumber": "XVI",
+      "number": 16,
+      "abbreviation": "NB",
+      "capital": "Chillán",
+      "ISO3166_2": "CL-NB",
+      "provinces": [
+        {
+          "identifier": "XVI-01",
+          "name": "Diguillín",
+          "capital": "Bulnes",
+          "communes": [
+            {
+              "identifier": "XVI-01-001",
+              "name": "Bulnes"
+            },
+            {
+              "identifier": "XVI-01-002",
+              "name": "Chillán"
+            },
+            {
+              "identifier": "XVI-01-003",
+              "name": "Chillán Viejo"
+            },
+            {
+              "identifier": "XVI-01-004",
+              "name": "El Carmen"
+            },
+            {
+              "identifier": "XVI-01-005",
+              "name": "Pemuco"
+            },
+            {
+              "identifier": "XVI-01-006",
+              "name": "Pinto"
+            },
+            {
+              "identifier": "XVI-01-007",
+              "name": "Quillón"
+            },
+            {
+              "identifier": "XVI-01-008",
+              "name": "San Ignacio"
+            },
+            {
+              "identifier": "XVI-01-009",
+              "name": "Yungay"
+            }
+          ]
+        },
+        {
+          "identifier": "XVI-02",
+          "name": "Itata",
+          "capital": "Quirihue",
+          "communes": [
+            {
+              "identifier": "XVI-02-001",
+              "name": "Cobquecura"
+            },
+            {
+              "identifier": "XVI-02-002",
+              "name": "Coelemu"
+            },
+            {
+              "identifier": "XVI-02-003",
+              "name": "Ninhue"
+            },
+            {
+              "identifier": "XVI-02-004",
+              "name": "Portezuelo"
+            },
+            {
+              "identifier": "XVI-02-005",
+              "name": "Quirihue"
+            },
+            {
+              "identifier": "XVI-02-006",
+              "name": "Ránquil"
+            },
+            {
+              "identifier": "XVI-02-007",
+              "name": "Treguaco"
+            }
+          ]
+        },
+        {
+          "identifier": "XVI-03",
+          "name": "Punilla",
+          "capital": "San Carlos",
+          "communes": [
+            {
+              "identifier": "XVI-03-001",
+              "name": "Coihueco"
+            },
+            {
+              "identifier": "XVI-03-002",
+              "name": "Ñiquén"
+            },
+            {
+              "identifier": "XVI-03-003",
+              "name": "San Carlos"
+            },
+            {
+              "identifier": "XVI-03-004",
+              "name": "San Fabián"
+            },
+            {
+              "identifier": "XVI-03-005",
+              "name": "San Nicolas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
