@@ -27,7 +27,7 @@ benefits for employees and other general enterprise directions.
 Use the vectorstore for questions on these topics. Use web-search for other general information about Accenture.
 If the question is out of scope, mark it as such."""
 
-# Prompt
+# Prompt2
 route_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
