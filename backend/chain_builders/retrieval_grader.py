@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 from langchain_core.runnables import Runnable
 import os
 
@@ -17,11 +17,7 @@ It does not need to be a stringent test. The goal is to filter out erroneous ret
 Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question."""
 
 def build_retrieval_grader_chain(
-        llm = AzureChatOpenAI(
-            deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         system_prompt = system_prompt,
         grader = GradeDocuments
     ) -> Runnable:

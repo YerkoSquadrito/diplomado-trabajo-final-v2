@@ -2,7 +2,7 @@ from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import Runnable
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 import os
 
 class MultiQuery(BaseModel):
@@ -32,11 +32,7 @@ prompt = ChatPromptTemplate.from_template(
 )
 
 def build_multi_query_generation_chain(
-        llm = AzureChatOpenAI(
-            deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         prompt = prompt,
         parser = parser
     ) -> Runnable:

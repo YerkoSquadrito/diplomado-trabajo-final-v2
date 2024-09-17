@@ -1,7 +1,7 @@
 from typing import Literal
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 from langchain_core.runnables import Runnable
 import os
 
@@ -36,11 +36,7 @@ route_prompt = ChatPromptTemplate.from_messages(
 )
 
 def build_router_chain(
-        llm = AzureChatOpenAI(
-            deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-            model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-            temperature=0 
-        ),
+        llm = global_llm,
         output_schema = RouteQuery,
         prompt = route_prompt
     ) -> Runnable:

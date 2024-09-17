@@ -2,16 +2,12 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import Runnable
 from langchain_core.language_models import BaseChatModel
-from langchain_openai import AzureChatOpenAI
+from .global_llm_instances import global_llm
 import os
 
 def build_standard_chat_chain(
     prompt: ChatPromptTemplate,
-    llm = AzureChatOpenAI(
-        deployment_name=os.getenv('AZURE_COMPLETIONS_DEPLOYMENT_NAME'), 
-        model_version=os.getenv('AZURE_COMPLETIONS_MODEL_VERSION'), 
-        temperature=0 
-    ),
+    llm = global_llm,
 ) -> Runnable:
     """
     Builds a question re-writer chain that converts an input question to a better version optimized for vectorstore retrieval.
