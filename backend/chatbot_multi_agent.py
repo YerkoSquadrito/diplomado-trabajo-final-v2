@@ -1,3 +1,4 @@
+from medicamentos.drugspecialist import main_drug_specialist, main_drug_specialist_with_history
 from chain_builders.question_router import build_router_chain
 from chain_builders.standard_chat_chain import build_standard_chat_chain
 from typing import Literal, Optional
@@ -109,10 +110,13 @@ def pharmacy_store_specialist(state):
 def drug_specialist(state):
     chat_history = state["chat_history"]
     input = {
-        "chat_history": chat_history,
+        "messages": chat_history,
     }
-    output = {"generation":"I am a drug specialist"}
-    # output = active_rag_graph.invoke(input)
+
+    question = (input["messages"][-1].content)
+    response = main_drug_specialist_with_history(input)
+
+    output = {"generation": response}    
     return {"chat_history": [AIMessage(content=output['generation'], name="drug_specialist")]}
 
 

@@ -9,3 +9,4 @@ langchain-chroma==0.1.2
 langchainhub==0.1.20
 langgraph==0.1.14
 uvicorn==0.30.3
+pandas==2.2.2
