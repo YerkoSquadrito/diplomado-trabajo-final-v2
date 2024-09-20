@@ -8,6 +8,7 @@ from typing import Annotated, TypedDict, List
 import operator
 from langchain_core.messages import BaseMessage, AIMessage, filter_messages, HumanMessage
 from langgraph.graph import END, StateGraph, START
+from modulo_farmacia import respond_farmacia
 
 # AGENTS
 ## FIRST ROUTER
@@ -103,9 +104,9 @@ def pharmacy_store_specialist(state):
     input = {
         "chat_history": chat_history,
     }
-    output = {"generation":"I am a pharmacy store specialist"}
+    specialist_json_response = respond_farmacia(input)
     # output = active_rag_graph.invoke(input)
-    return {"chat_history": [AIMessage(content=output['generation'], name="pharmacy_store_specialist")]}
+    return {"chat_history": [AIMessage(content=specialist_json_response['generation'], name="pharmacy_store_specialist")]}
 
 def drug_specialist(state):
     chat_history = state["chat_history"]
