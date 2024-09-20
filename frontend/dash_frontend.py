@@ -200,8 +200,10 @@ def update_bot_response(chat_history):
     if chat_history and chat_history[-1][0] == 'human':
         # Send request to FastAPI backend
         input = {"chat_history": chat_history}
-        # ai_response = requests.post("http://backend:8001/chat", json=input).json()['response']
-        ai_response = requests.post("http://localhost:8001/chat", json=input).json()['response']
+        try:
+            ai_response = requests.post("http://backend:8001/chat", json=input).json()['response']
+        except:
+            ai_response = requests.post("http://localhost:8001/chat", json=input).json()['response']
         logging.error(ai_response)
         
         # Reconstruct chat display from chat history
