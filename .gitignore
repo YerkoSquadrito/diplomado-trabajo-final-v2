@@ -1,0 +1,15 @@
+# Python specific
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+
+# GC
+.venv/
+.env
+
+*.xlsx
+*.ipynb
