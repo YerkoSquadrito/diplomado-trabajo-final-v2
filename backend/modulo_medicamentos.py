@@ -1,55 +1,28 @@
 import pandas as pd
 import os
-from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from langchain_text_splitters import CharacterTextSplitter
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
-import dotenv
+from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain.output_parsers.openai_tools import PydanticToolsParser
-from langchain.schema.runnable import RunnableLambda
-from langchain_core.pydantic_v1 import BaseModel, Field
-import time
 from langchain_core.prompts import PromptTemplate
-from langchain.chains import LLMChain
-
 from typing import Literal, TypedDict
-
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
-#from langgraph.checkpoint import MemorySaver
-#from langgraph.graph import END, StateGraph, MessagesState
-#from langgraph.prebuilt import ToolNode, create_react_agent
 from langchain_core.tools import tool
-from pprint import pprint
-#from langchain_experimental.utilities import PythonREPL
-import json
-import requests
-
 from langchain_core.prompts import PromptTemplate
 from typing import Literal, TypedDict
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
-from langgraph.prebuilt import ToolNode, create_react_agent
+from langgraph.prebuilt import ToolNode
 from langchain_core.tools import tool
-from pprint import pprint
-import json
 from typing import Annotated, Sequence, TypedDict
-from langchain_core.messages import BaseMessage, HumanMessage, ToolMessage
+from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.messages import HumanMessage, SystemMessage
-#from langchain_experimental.utilities import PythonREPL
 import operator
 
 
-pathcsv = "./medicamentos/DrugData.csv"
-dotenv.load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-LANGCHAIN_API_KEY= os.environ["LANGCHAIN_API_KEY"]
+pathcsv = "./data/DrugData.csv"
+load_dotenv()
 
 #filtrar csv
 def filtrar_csv(bd,column_name,colum_value):    

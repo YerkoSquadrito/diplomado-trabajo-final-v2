@@ -1,4 +1,4 @@
-from medicamentos.drugspecialist import main_drug_specialist, main_drug_specialist_with_history
+from modulo_medicamentos import main_drug_specialist_with_history
 from chain_builders.question_router import build_router_chain
 from chain_builders.standard_chat_chain import build_standard_chat_chain
 from typing import Literal, Optional
@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.pydantic_v1 import BaseModel, Field
 from typing import Annotated, TypedDict, List
 import operator
-from langchain_core.messages import BaseMessage, AIMessage, filter_messages, HumanMessage
+from langchain_core.messages import BaseMessage, AIMessage
 from langgraph.graph import END, StateGraph, START
 from modulo_farmacia import respond_farmacia
 
