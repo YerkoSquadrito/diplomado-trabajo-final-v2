@@ -248,7 +248,6 @@ def send_message(n_clicks, n_submit, user_input, chat_history_display, chat_hist
                     return chat_history_display, "", chat_history, user_name
                 else:
                     return dash.no_update
-
     else:
         return dash.no_update
 
@@ -277,7 +276,7 @@ def update_bot_response(chat_history, user_input, session_id):
         chat_history_display = reconstruct_chat_display(chat_history)
         
         # Add new bot response
-        chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(ai_response)))
+        # chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(ai_response)))
         
         # Update chat history
         chat_history = ai_response.get('chat_history')
