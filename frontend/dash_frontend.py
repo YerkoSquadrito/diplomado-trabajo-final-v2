@@ -73,13 +73,9 @@ custom_styles = {
 }
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-default_message = """¡Hola! Soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. 
-Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile."""
-
 identification_message = """Antes de comenzar, necesito que me recuerdes tu nombre..."""
 
 app.layout = dbc.Container([
-    # dcc.Store(id='chat-history', data=[('ai', default_message)]),
     dcc.Store(id='chat-history', data=[('ai', identification_message)]),
     dcc.Store(id='session-id', data=None),
     dcc.Store(id='custom-styles', data=custom_styles),
@@ -96,7 +92,6 @@ app.layout = dbc.Container([
                         html.Div([
                                 html.Div([
                                     html.Strong("Farma Bot:", className="message-sender"),
-                                    # html.Div([default_message], className="message-bubble.bot-message")
                                     html.Div([identification_message], className="message-bubble.bot-message")
                                 ], className="message-container.bot-message-container"
                                 , style = {'text-align' : ['left'][0],
@@ -163,28 +158,18 @@ def create_message_bubble(sender, message):
             }
     )
 
-
-# def request_chat_history(user_input):
-#     try:
-#         response = requests.post("http://backend:8001/identify", json=user_input).json()['response']
-#     except:
-#         response = requests.post("http://localhost:8001/identify", json=user_input).json()['response']
-#     return response['user_name'], response['chat_history']
 import json
-def request_chat_history(user_input):
+def identify_user(user_input):
     user_input = {"message": user_input}
     try:
         response = requests.post("http://localhost:8001/identify", json=user_input)
     except:
         response = requests.post("http://backend:8001/identify", json=user_input)
     json_response = response.json().get('response')
-    print(json_response)
     return json_response.get('user_name'), json_response.get('chat_history')
 
 
-
 import logging
-import ast
 @app.callback(
     Output("chat-display", "children", allow_duplicate=True),
     Output("user-input", "value"),
@@ -213,51 +198,60 @@ def send_message(n_clicks, n_submit, user_input, chat_history_display, chat_hist
             chat_history_display = []
         chat_history_display.append(user_message)
 
-        # Identify user and request chat history on Redis
         if session_id: # User already identified...
-            chat_history = chat_history + [('human', user_input)]
             writing_message = create_message_bubble("Farma Bot:", "Escribiendo...")
             chat_history_display.append(writing_message)
+            chat_history = chat_history + [('human', user_input)]
             return chat_history_display, "", chat_history, session_id
-        else:
-            user_name, chat_history = request_chat_history(user_input)
-            print(chat_history)
-            if chat_history==[]: # First time user...
-                user_name = user_name.upper()
-                greetings = f"¡Un gusto, {user_name}! Me parece que es primera vez que hablamos. Soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile. ¿En qué puedo ayudarte hoy?"
-                chat_history = chat_history + [('system', 'Considera que el usuario acaba de iniciar una nueva sesión'), ('ai', identification_message), ('human', user_input), ('ai', greetings)]
-                writing_message = create_message_bubble("Farma Bot:", greetings)
-                chat_history_display.append(writing_message)
-                return chat_history_display, "", chat_history, user_name
-            if chat_history!=None: # User now identified...
-                user_name = user_name.upper()
-                greetings = f"¡Qué bueno verte nuevamente, {user_name}! Por si no recuerdas: soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile. ¿En qué puedo ayudarte hoy?"
-                chat_history = chat_history + [('system', 'Considera que el usuario acaba de iniciar una nueva sesión'), ('ai', identification_message), ('human', user_input), ('ai', greetings)]
-                writing_message = create_message_bubble("Farma Bot:", greetings)
-                chat_history_display.append(writing_message)
-                return chat_history_display, "", chat_history, user_name
-            else: # Coud not identify user...
-                writing_message = create_message_bubble("Farma Bot:", "No capté tu nombre. Por favor, vuelve a intentarlo. ¿Cómo te llamas?")
+        else: # User not identified yet...
+            user_name, chat_history = identify_user(user_input)
+            if user_name==None: # Coud not identify user...
+                writing_message = create_message_bubble("Farma Bot:", "Ups, no capté tu nombre. Por favor, vuelve a intentarlo. ¿Cómo te llamas?")
                 chat_history_display.append(writing_message)
                 return chat_history_display, "", [], None
-    return dash.no_update
+            else:
+                if chat_history==[]: # First time user...
+                    user_name = user_name.upper()
+                    greetings = f"¡Un gusto, {user_name}! Me parece que es primera vez que hablamos. Soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile. ¿En qué puedo ayudarte hoy?"
+                    chat_history = chat_history + [('system', 'Considera que el usuario acaba de iniciar una nueva sesión'), ('ai', identification_message), ('human', user_input), ('ai', greetings)]
+                    writing_message = create_message_bubble("Farma Bot:", greetings)
+                    chat_history_display.append(writing_message)
+                    return chat_history_display, "", chat_history, user_name
+                elif chat_history!=None: # User now identified...
+                    user_name = user_name.upper()
+                    greetings = f"¡Qué bueno verte nuevamente, {user_name}! Por si no recuerdas: soy tu asistente virtual de farmacias, desarrollado por el Grupo 2 del Diplomado de IA Generativa para Organizaciones de la FEN. Mis capacidades consisten en ayudarte con consultas sobre medicamentos específicos o sobre las farmacias de turno en Chile. ¿En qué puedo ayudarte hoy?"
+                    chat_history = chat_history + [('system', 'Considera que el usuario acaba de iniciar una nueva sesión'), ('ai', identification_message), ('human', user_input), ('ai', greetings)]
+                    writing_message = create_message_bubble("Farma Bot:", greetings)
+                    chat_history_display.append(writing_message)
+                    return chat_history_display, "", chat_history, user_name
+                else:
+                    return dash.no_update
+
+    else:
+        return dash.no_update
 
 @app.callback(
     Output("chat-display", "children"),
     Output("chat-history", "data"),
     Input("chat-history", "data"),
+    State("user-input", "value"),
+    State("session-id", "data"),
     prevent_initial_call=True
 )
-def update_bot_response(chat_history):
+def update_bot_response(chat_history, user_input, session_id):
     if chat_history and chat_history[-1][0] == 'human': # If last message was sent by the user...
         # Send request to FastAPI backend
-        input = {"chat_history": chat_history}
+        input = {"message": chat_history[-1][1], "user_name": session_id}
+        print(input)
         try:
-            ai_response = requests.post("http://backend:8001/chat", json=input).json()['response']
+            response = requests.post("http://backend:8001/chat", json=input)
         except:
-            ai_response = requests.post("http://localhost:8001/chat", json=input).json()['response']
-        logging.error(ai_response)
-        
+            response = requests.post("http://localhost:8001/chat", json=input)
+        ai_response = response.json().get('response')
+        print(ai_response)
+        chat_history = ai_response.get('chat_history')
+        chat_history = [(msg['type'], msg['content']) for msg in chat_history] 
+          
         # Reconstruct chat display from chat history
         chat_history_display = []
         for sender, message in chat_history:
@@ -270,10 +264,11 @@ def update_bot_response(chat_history):
         chat_history_display.append(create_message_bubble("Farma Bot:", dcc.Markdown(ai_response)))
         
         # Update chat history
-        chat_history = chat_history + [('ai', ai_response)]
+        chat_history = ai_response.get('chat_history')
         
         return chat_history_display, chat_history
-    return dash.no_update
+    else:
+        return dash.no_update
 
 
 
