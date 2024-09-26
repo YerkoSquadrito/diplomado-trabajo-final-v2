@@ -4,7 +4,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 from typing import Optional
 
 class UserSchema(BaseModel):
-    user_name: Optional[str] = Field(description="The user name mentioned by the human in his last message, which will be used as session_id. Use lower case always.")
+    user_name: Optional[str] = Field(description="The user name mentioned by the human in his last message, which will be used as session_id. Use upper case always.")
 
 identifyier_prompt = ChatPromptTemplate.from_messages(
         [

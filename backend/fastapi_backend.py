@@ -3,12 +3,14 @@ from pydantic import BaseModel
 from langchain_core.messages import HumanMessage, AIMessage, filter_messages
 from chatbot_multi_agent import chatbot
 from indentificacion_usuario import user_identifier_chain, retrieve_history
+from typing import Optional
 
 app = FastAPI()
 
 class Messages(BaseModel):
     message: str
     user_name: str
+    type: Optional[str]
 
 @app.post("/chat")
 async def chat(input_data: Messages):
@@ -19,6 +21,14 @@ async def chat(input_data: Messages):
     redis_history.add_ai_message(ai_text_response)
     return {"response": {"chat_history": redis_history.messages}}
 
+@app.post("/add_message")
+async def chat(input_data: Messages):
+    redis_history = retrieve_history(input_data.user_name)
+    if input_data.type == "user":
+        redis_history.add_user_message(input_data.message)
+    elif input_data.type == "ai":
+        redis_history.add_ai_message(input_data.message)
+
 class MessageInput(BaseModel):
     message: str
 
@@ -26,8 +36,8 @@ class MessageInput(BaseModel):
 async def identify(input_data: MessageInput):
     response = user_identifier_chain.invoke({'message':input_data.message})
     if response.user_name:
-        chat_history = retrieve_history(response.user_name).messages
-        return {"response": {'user_name': response.user_name, 'chat_history': chat_history}}
+        redis_history = retrieve_history(response.user_name).messages
+        return {"response": {'user_name': response.user_name, 'chat_history': redis_history}}
     else:
         return {"response": {'user_name': None, 'chat_history': []}}
 
