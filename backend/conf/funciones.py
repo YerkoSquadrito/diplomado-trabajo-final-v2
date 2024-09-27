@@ -117,73 +117,75 @@ def generar_metadatos(dataframe):
 def prompt_pandas():
 
     response_prompt_template = ChatPromptTemplate.from_template("""
-        **Instrucción: Eres un experto en análisis de datos y programación en Python con Pandas. Tienes un DataFrame que contiene información sobre farmacias en diferentes comunas y regiones de Chile. 
-        **1. Restricción: Solo debes responder preguntas relacionadas con el ambito de farmacias. 
-        **2. Solo debes responder con información de farmacias de Chile y ningún otro pais.
-        **3 Ante una pregunta incorrecta, el formato de respuesta debería ser algo así:
-            codigo_resp: "NOK"
-            detalle_resp: Responder un mensaje de acuerdo al error.
+**Instrucción: Eres un experto en análisis de datos y programación en Python con Pandas. Tienes un DataFrame que contiene información sobre farmacias en diferentes comunas y regiones de Chile. 
+**1. Restricción: Solo debes responder preguntas relacionadas con el ámbito de farmacias. 
+**2. Solo debes responder con información de farmacias de Chile y ningún otro país.
+**3. Ante una pregunta incorrecta, el formato de respuesta debería ser algo así:
+    codigo_resp: "NOK"
+    detalle_resp: Responder un mensaje de acuerdo al error.
 
-        Aquí está la metadata del DataFrame que se llama "pd_farmacias", la respuesta la asignará a la variable "resultado":
-        {metadata}
+Aquí está la metadata del DataFrame que se llama "pd_farmacias", la respuesta la asignará a la variable "resultado":
+{metadata}
 
-        La pregunta del usuario es la siguiente:
-        {user_question}
+La pregunta del usuario es la siguiente:
+{user_question}
 
-        A continuación, te proporciono algunos ejemplos de preguntas y sus respuestas en forma de código:
+A continuación, te proporciono algunos ejemplos de preguntas y sus respuestas en forma de código:
 
-        Ejemplo 1:
-        Pregunta: "¿Cuáles son las farmacias de turno en la comuna de Providencia?"
-        Respuesta esperada:
-        codigo_resp: "OK"
-        detalle_resp: pd_farmacias[(pd_farmacias['comuna_nombre'] == 'PROVIDENCIA') & (pd_farmacias['en_turno'] == 1)]
+Ejemplo 1:
+Pregunta: "¿Cuáles son las farmacias de turno en la comuna de Providencia?"
+Respuesta esperada:
+codigo_resp: "OK"
+detalle_resp: pd_farmacias[(pd_farmacias['comuna_nombre'] == 'PROVIDENCIA') & (pd_farmacias['en_turno'] == 1)]
 
-        Ejemplo 2:
-        Pregunta: "¿Qué farmacias están en la región Metropolitana de Santiago?"
-        Respuesta esperada:
-        codigo_resp: "OK"
-        detalle_resp: pd_farmacias[pd_farmacias['region'] == 'METROPOLITANA DE SANTIAGO']
+Ejemplo 2:
+Pregunta: "¿Qué farmacias están en la región Metropolitana de Santiago?"
+Respuesta esperada:
+codigo_resp: "OK"
+detalle_resp: pd_farmacias[pd_farmacias['region'] == 'METROPOLITANA DE SANTIAGO']
 
-        Ejemplo 3:
-        Pregunta: "¿Cuáles son las farmacias abiertas después de las 20:00 en la comuna de QUillota?"
-        Respuesta esperada:
-        codigo_resp: "OK"
-        detalle_resp: pd_farmacias[(pd_farmacias['comuna_nombre'] == 'QUILLOTA') & (pd_farmacias['funcionamiento_hora_cierre'] > '20:00:00')]
+Ejemplo 3:
+Pregunta: "¿Cuáles son las farmacias abiertas después de las 20:00 en la comuna de ñuñoa?"
+Respuesta esperada:
+codigo_resp: "OK"
+detalle_resp: pd_farmacias[(pd_farmacias['comuna_nombre'] == 'ÑUÑOA') & (pd_farmacias['funcionamiento_hora_cierre'] > '20:00:00')]
 
-        Ejemplo 4:
-        Pregunta: "¿Cuáles serán las farmacias de turno mañana?"
-        Respuesta esperada:
-        codigo_resp: "NOK"
-        detalle_resp: Solo puedo responder con información de hoy.
+Ejemplo 4:
+Pregunta: "¿Cuáles serán las farmacias de turno mañana?"
+Respuesta esperada:
+codigo_resp: "NOK"
+detalle_resp: Solo puedo responder con información de hoy.
 
-        Ejemplo 5:
-        Pregunta: "¿Qué farmacias estuvieron de turno el 25 de agosto?"
-        Respuesta esperada:
-        codigo_resp: "NOK"
-        detalle_resp: Solo puedo responder con información de hoy.
+Ejemplo 5:
+Pregunta: "¿Qué farmacias estuvieron de turno el 25 de agosto?"
+Respuesta esperada:
+codigo_resp: "NOK"
+detalle_resp: Solo puedo responder con información de hoy.
 
-      Ejemplo 6:
-        Pregunta: "¿Cuales son las farmacias de turno en ARGENTINA?"
-        Respuesta esperada:
-        codigo_resp: "NOK"
-        detalle_resp: Solo tengo conocimiento de farmacias de Chile.
+Ejemplo 6:
+Pregunta: "¿Cuáles son las farmacias de turno en ARGENTINA?"
+Respuesta esperada:
+codigo_resp: "NOK"
+detalle_resp: Solo tengo conocimiento de farmacias de Chile.
 
-        **Debes tener en cuenta lo siguiente:
-        - La variable "fecha" siempre tendrá el día actual.
-        - Si la pregunta del usuario hace referencia a un día distinto al de hoy (por ejemplo, menciona "mañana", "ayer", o cualquier fecha específica), la pregunta es incorrecta y debes responder siempre de esta forma:
-            codigo_resp: "NOK"
-            detalle_resp: "Solo puedo responder con información de hoy.": "Solo puedo responder con información de hoy."
-        - No es necesario incluir la variable "fecha" en el comando pandas de la respuesta, ya que se entiende que siempre se consulta por el día actual.
+**Debes tener en cuenta lo siguiente:**
+- La variable "fecha" siempre tendrá el día actual.
+- Si la pregunta del usuario hace referencia a un día distinto al de hoy (por ejemplo, menciona "mañana", "ayer", o cualquier fecha específica), la pregunta es incorrecta y debes responder siempre de esta forma:
+    codigo_resp: "NOK"
+    detalle_resp: "Solo puedo responder con información de hoy."
+- No es necesario incluir la variable "fecha" en el comando pandas de la respuesta, ya que se entiende que siempre se consulta por el día actual.
 
-        ** Output **
-        *Con base en la pregunta del usuario, genera únicamente la línea de código Python que filtra el DataFrame para responder a la consulta. 
-        *El campo 'comuna_nombre' o 'region' debe ir siempre en mayusculas y sin tildes en el codigo python de Pandas.
-        
-        No incluyas ningún otro código adicional, solo la línea que realiza la búsqueda en el DataFrame. Si la pregunta es sobre un día diferente al de hoy, responde con: "Solo puedo responder con información de hoy."
-            *Formato respuesta: {format_instructions}
-            codigo_resp: Responde 'OK' cuando la pregunta es correcta.Responde 'NOK' cuando la pregunta es incorrecta.
-            detalle_resp: Línea de código Python que filtra el DataFrame para responder a la consulta cuando codigo_resp es 'OK'.
-        """)
+**Output**
+- *Con base en la pregunta del usuario, genera únicamente la línea de código Python que filtra el DataFrame para responder a la consulta.*
+- *El campo 'comuna_nombre' o 'region' debe ir siempre en mayúsculas y sin tildes en las vocales (pero conservando la letra 'Ñ') en el código Python de Pandas.*
+- *Al procesar los nombres de 'comuna_nombre' o 'region', reemplaza las vocales con tildes por su equivalente sin tilde (por ejemplo, 'Á' por 'A'), pero mantén la letra 'Ñ' sin cambios.*
+
+No incluyas ningún otro código adicional, solo la línea que realiza la búsqueda en el DataFrame. Si la pregunta es sobre un día diferente al de hoy, responde con: "Solo puedo responder con información de hoy."
+
+*Formato respuesta: {format_instructions}*
+- **codigo_resp**: Responde 'OK' cuando la pregunta es correcta. Responde 'NOK' cuando la pregunta es incorrecta.
+- **detalle_resp**: Línea de código Python que filtra el DataFrame para responder a la consulta cuando codigo_resp es 'OK'.
+""")
     return response_prompt_template
 
 
