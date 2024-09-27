@@ -2,20 +2,44 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from langchain_core.messages import HumanMessage, AIMessage, filter_messages
 from chatbot_multi_agent import chatbot
+from indentificacion_usuario import user_identifier_chain, retrieve_history
+from typing import Optional
 
 app = FastAPI()
 
 class Messages(BaseModel):
-    chat_history: list
-
+    message: str
+    user_name: str
+    type: Optional[str]
 
 @app.post("/chat")
-async def chat(messages: Messages):
-    chat_history = [HumanMessage(item[1]) if item[0]=='human' else AIMessage(item[1]) for item in messages.chat_history]
-    graph_response = chatbot.invoke({"chat_history": chat_history})
-    chat_history = graph_response["chat_history"]
-    response = filter_messages(chat_history, include_types=[AIMessage])[-1].content
-    return {"response": f'{response}'}
+async def chat(input_data: Messages):
+    redis_history = retrieve_history(input_data.user_name)
+    redis_history.add_user_message(input_data.message)
+    graph_response = chatbot.invoke({"chat_history": redis_history.messages})
+    ai_text_response = filter_messages(graph_response["chat_history"], include_types=[AIMessage])[-1].content
+    redis_history.add_ai_message(ai_text_response)
+    return {"response": {"chat_history": redis_history.messages}}
+
+@app.post("/add_message")
+async def chat(input_data: Messages):
+    redis_history = retrieve_history(input_data.user_name)
+    if input_data.type == "user":
+        redis_history.add_user_message(input_data.message)
+    elif input_data.type == "ai":
+        redis_history.add_ai_message(input_data.message)
+
+class MessageInput(BaseModel):
+    message: str
+
+@app.post("/identify")
+async def identify(input_data: MessageInput):
+    response = user_identifier_chain.invoke({'message':input_data.message})
+    if response.user_name:
+        redis_history = retrieve_history(response.user_name).messages
+        return {"response": {'user_name': response.user_name, 'chat_history': redis_history}}
+    else:
+        return {"response": {'user_name': None, 'chat_history': []}}
 
 if __name__ == "__main__":
     import uvicorn
