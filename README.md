@@ -8,3 +8,7 @@ LANGCHAIN_TRACING_V2 = "true"
 LANGCHAIN_PROJECT = "Trabajo final diplomado"
 REDIS_URL = ...
 
+Correr los siguientes comandos:
+docker-compose build
+docker-compose up
+
